@@ -11,7 +11,7 @@ const Weather = () => {
 {weatherData.list?weatherData.list.map((item,index) => (
         <div key={index} className="bg-sky-500 p-4 rounded-lg">
             <img className="h-24 w-28" src={`http://openweathermap.org/img/wn/${item.weather[0].icon}.png`} alt="weather icon"/>
-          <h1 className="text-2xl font-bold">{new Date(item.dt*1000).toLocaleDateString('de-Ge',{weekday:'long'})}</h1>
+          <h1 className="text-2xl font-bold underline">{new Date(item.dt*1000).toLocaleDateString('de-Ge',{weekday:'long'})}</h1>
           <h3 className="text-xl">Temperate: {item.main.temp}°C</h3>
           <p>{item.dt_txt}</p>
           <p>{item.weather[0].description}</p>
